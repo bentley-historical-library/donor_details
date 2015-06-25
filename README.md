@@ -1,2 +1,4 @@
 # donor_details
-Plugin that adds donor details to agents
+ArchivesSpace plugin that adds donor details to agents. 
+
+Currently only includes donor numbers.
