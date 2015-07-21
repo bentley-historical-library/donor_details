@@ -1,7 +1,6 @@
-
 {
   "donor_details" => {
-  	"type" => "array", 
+  	"type" => "array",
   	"items" => {"type" => "JSONModel(:donor_detail) object"}
   }
- }	
+ }
