@@ -7,6 +7,3 @@ en:
     _frontend:
       action:
         add: Add Donor Detail
-
-  validation_errors:
-    donor_number_must_be_unique: Donor number must be unique
