@@ -15,10 +15,5 @@ class DonorDetail < Sequel::Model(:donor_detail)
 			},
 			:only_if => proc { |json| json["number_auto_generate"]}
 
-  def validate
-    super
-    validates_unique(:number, :message => "Donor number must be unique")
-  end
-
 
 end

@@ -1,12 +1,9 @@
 en:
   donor_detail:
     number: Donor Number
-    dart_id: DART ID
+    dart_id: DART LID
     _plural: Donor Details
     _singular: Donor Detail
     _frontend:
       action:
         add: Add Donor Detail
-
-  validation_errors:
-    donor_number_must_be_unique: Donor number must be unique

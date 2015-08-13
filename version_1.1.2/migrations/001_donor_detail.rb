@@ -27,7 +27,6 @@ Sequel.migration do
       add_foreign_key([:agent_family_id], :agent_family, :key => :id)
       add_foreign_key([:agent_corporate_entity_id], :agent_corporate_entity, :key => :id)
       add_foreign_key([:agent_software_id], :agent_software, :key => :id)
-      add_unique_constraint(:number, :name => "donor_number_uniq")
     end
 
   end
