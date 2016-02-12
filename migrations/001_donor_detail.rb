@@ -18,6 +18,7 @@ Sequel.migration do
       String :number
       Integer :number_auto_generate
       String :dart_id
+      String :beal_contact_id
 
       apply_mtime_columns
     end
