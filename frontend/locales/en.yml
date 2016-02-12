@@ -1,6 +1,6 @@
 en:
   donor_detail:
-    number: Donor Number
+    donor_number: Donor Number
     dart_id: DART LID
     beal_contact_id: BEAL Contact ID
     _plural: Donor Details

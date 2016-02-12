@@ -15,8 +15,8 @@ Sequel.migration do
       Integer :agent_corporate_entity_id, :null => true
       Integer :agent_software_id, :null => true
 
-      String :number
-      Integer :number_auto_generate
+      String :donor_number
+      Integer :donor_number_auto_generate
       String :dart_id
       String :beal_contact_id
 
