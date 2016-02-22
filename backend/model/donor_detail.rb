@@ -6,13 +6,13 @@ class DonorDetail < Sequel::Model(:donor_detail)
 
 	set_model_scope :global
 
-	auto_generate 	:property => :number,
+	auto_generate 	:property => :donor_number,
 			:generator => proc { |json|
-			donors = DonorDetail.select(:number).map(&:number)
+			donors = DonorDetail.select(:donor_number).map(&:donor_number)
     			donors_int = donors.map {|i| i.to_i}
     			new_donor_int = donors_int.max + 1
     			new_donor_int.to_s
 			},
-			:only_if => proc { |json| json["number_auto_generate"]}
+			:only_if => proc { |json| json["donor_number_auto_generate"]}
 
 end
