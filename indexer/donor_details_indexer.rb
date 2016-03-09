@@ -5,7 +5,8 @@ class CommonIndexer
         doc['donor_number_u_sstr'] = record['record']['donor_details'].collect{|donor| donor['donor_number']}.compact
         doc['dart_id_u_sstr'] = record['record']['donor_details'].collect{|donor| donor['dart_id']}.compact
         doc['beal_contact_id_u_sstr'] = record['record']['donor_details'].collect{|donor| donor['beal_contact_id']}.compact
-      end
+        doc['fullrecord'] << "#{record['record']['donor_details'].collect{|donor| donor['donor_number']}.compact}"
+	end
     }
   end
 end
