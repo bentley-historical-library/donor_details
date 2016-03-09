@@ -8,3 +8,6 @@ en:
     _frontend:
       action:
         add: Add Donor Detail
+  advanced_search:
+    text:
+      donor_number: Donor Number
