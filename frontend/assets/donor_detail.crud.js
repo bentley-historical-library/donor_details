@@ -14,9 +14,9 @@ $(function() {
     }
 
 
-    //if ($checkbox.is(":checked")) {
-      //disableDonorNumber();
-    //}
+    if ($checkbox.is(":checked")) {
+      disableDonorNumber();
+    }
 
     $checkbox.change(function() {
       if ($checkbox.is(":checked")) {
