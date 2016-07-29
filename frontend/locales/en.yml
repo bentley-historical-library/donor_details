@@ -1,13 +1,18 @@
 en:
+  plugins:
+    donor_detail:
+      _plural: Donor Details
+      _singular: Donor Detail
+      _frontend:
+        action:
+          add: Add Donor Detail
+    donor_details:
+      _plural: Donor Details
+      _singular: Donor Detail
   donor_detail:
     donor_number: Donor Number
     dart_id: DART LID
     beal_contact_id: BEAL Contact ID
-    _plural: Donor Details
-    _singular: Donor Detail
-    _frontend:
-      action:
-        add: Add Donor Detail
   advanced_search:
     text:
       donor_number: Donor Number

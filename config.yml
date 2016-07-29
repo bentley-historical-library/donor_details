@@ -1,0 +1,17 @@
+parents:
+  agent:
+    name: donor_details
+    cardinality: zero_to_many
+  agent_person:
+    name: donor_details
+    cardinality: zero_to_many
+  agent_family:
+    name: donor_details
+    cardinality: zero_to_many
+  agent_corporate_entity:
+    name: donor_details
+    cardinality: zero_to_many
+  agent_software:
+    name: donor_details
+    cardinality: zero_to_many
+  

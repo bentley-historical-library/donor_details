@@ -1,0 +1,26 @@
+<%
+  section_id = "#{@agent.agent_type}_donor_details" if section_id.blank?
+%>
+
+<section id="<%= section_id %>">
+  <h3><%= I18n.t("plugins.donor_detail._plural") %></h3>
+  <div class="accordion details" id="donor_details_accordion">
+    <% donor_details.each_with_index do | donor_detail, index | %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <div class="row accordion-toggle collapsed" data-toggle="collapse" data-parent="#donor_details_accordion" href="#donor_detail_<%= index %>">
+            <div class="col-md-1">
+              <span class="glyphicon"></span>
+            </div>
+          <div class="col-md-7">
+            <%= donor_detail["donor_number"] %>
+          </div>
+        </div>
+      </div>
+      <div id="donor_detail_<%= index %>" class="accordion-body collapse">
+        <%= read_only_view(donor_detail) %>
+      </div>
+    </div>
+    <% end %>
+   </div>
+</section>
