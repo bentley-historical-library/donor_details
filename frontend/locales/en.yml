@@ -16,6 +16,7 @@ en:
   advanced_search:
     text:
       donor_number: Donor Number
+      dart_id: DART LID
   search_results:
     filter:
       is_donor_u_sbool: Donors
