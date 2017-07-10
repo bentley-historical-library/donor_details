@@ -1,10 +1,10 @@
 <% define_template "donor_detail", jsonmodel_definition(:donor_detail) do |form| %>
   <div class="subrecord-form-fields">
     <% if form.obj["donor_number"].blank? %>
-  <%= form.label_and_textfield "donor_number", {:field_opts => {:automatable => true}} %>
-  <% else %>
-  <%= form.label_and_textfield "donor_number" %>
-  <% end %>
+    <%= form.label_and_textfield "donor_number", {:field_opts => {:automatable => true}} %>
+    <% else %>
+    <%= form.label_and_textfield "donor_number" %>
+    <% end %>
     <%= form.label_and_textfield "dart_id" %>
     <%= form.label_and_textfield "beal_contact_id" %>
   </div>
