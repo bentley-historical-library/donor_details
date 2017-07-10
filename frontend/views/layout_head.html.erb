@@ -1,0 +1,27 @@
+<% if controller.controller_name == "accessions" && ["show", "new", "edit"].include?(controller.action_name) %>
+	<% if @accession.linked_agents.length > 0 %>
+		<% 
+		linked_agents = @accession.linked_agents
+		sources = linked_agents.reject { |link| link["role"] != "source"}
+		%>
+
+		<% if sources.length > 0 %>
+				<script>
+					var init = function () {
+						setTimeout(function () {
+							var header = $("h2").first();
+							header.append("<h4>Donors:</h4>");
+							<% sources.each do |source|
+							 donor_name = source["_resolved"]["title"]
+							 donor_number = source["_resolved"]["donor_details"][0] ? source["_resolved"]["donor_details"][0]["donor_number"] : "unassigned"
+						 	%>
+								header.append("<h4><%= donor_name %> (Donor No. <%= donor_number %>)</h4>");
+							<% end %>
+						}, 0);
+					}
+
+					$(window).load(init);
+				</script>
+		<% end %>
+	<% end %>
+<% end %>
