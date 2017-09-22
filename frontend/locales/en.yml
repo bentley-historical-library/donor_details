@@ -17,6 +17,7 @@ en:
     text:
       donor_number: Donor Number
       dart_id: DART LID
+      beal_contact_id: BEAL Contact ID
   search_results:
     filter:
       is_donor_u_sbool: Donors
