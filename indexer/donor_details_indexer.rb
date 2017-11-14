@@ -1,4 +1,4 @@
-class IndexerCommon
+class CommonIndexer
 
   self.add_indexer_initialize_hook do |indexer|
     indexer.add_document_prepare_hook {|doc, record|
@@ -11,5 +11,5 @@ class IndexerCommon
       end
     }
   end
-  
+
 end
