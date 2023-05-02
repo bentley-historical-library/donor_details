@@ -8,8 +8,8 @@ class DonorDetail < Sequel::Model(:donor_detail)
 
     auto_generate(:property => :donor_number,
             :generator => proc { |json|
-            donors = DonorDetail.select(:donor_number).map(&:donor_number)
-            donors_int = donors.map {|i| i.to_i}
+            donors = ASUtils.wrap(DonorDetail.select(:donor_number).all).map{|row| row[:donor_number]}
+            donors_int = donors.empty? ? [0] : donors.map {|i| i.to_i}
             new_donor_int = donors_int.max + 1
             new_donor_int.to_s
             },
