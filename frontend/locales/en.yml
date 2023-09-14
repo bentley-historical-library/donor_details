@@ -18,6 +18,6 @@ en:
       donor_number: Donor Number
       dart_id: DART LID
       beal_contact_id: BEAL Contact ID
-  search_results:
-    filter:
+  search:
+    agent:
       is_donor_u_sbool: Donors
