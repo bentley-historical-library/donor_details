@@ -13,6 +13,8 @@ Rails.application.config.after_initialize do
         def render_aspace_partial(args)
             if args[:partial] == "search/listing"
                 if controller.controller_name == 'agents' || ASUtils.wrap(@search_data['results']).any?{|result| ASUtils.wrap(result['types']).include?("agent")}
+                    # Sets @columns if it hasn't been set yet (as is the case with view-only users)
+                    add_columns
                     action_column = @columns.pop if @columns.last.class.include?('actions')
 
                     add_column(I18n.t("donor_detail.donor_number"),
